@@ -1,0 +1,120 @@
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #ff0000;
+  margin-bottom: 40px;
+}
+p {
+  color: #ccc;
+  margin-bottom: 40px;
+}
+#filmes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.filme {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  background-color: #000;
+  border: 1.5px solid #ce0000;
+  border-radius: 20px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+.filme img {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.filme img:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(65, 64, 64, 0.5);
+  transform: scale(1.05);
+}
+.filme h2 {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 10px 0;
+  transition: text-decoration 0.3s ease;
+}
+.filme h2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.filme:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(241, 12, 12, 0.7);
+}
+.descricao {
+  height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: normal;
+  color: #ccc;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.btnfos-5 {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(255, 0, 0, 0.7);
+  padding: 5px 10px;
+  border: 2px solid rgba(255, 0, 0, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  font-weight: bold;
+}
+
+.btnfos-5:hover {
+  background-color: rgba(255, 0, 0, 1);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 25px rgba(255, 0, 0, 0.5);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+footer {
+  border-top: #000000 1px solid;
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  color: #ccc;
+  font-size: 14px;
+}
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: #ff0000;
+}
+
