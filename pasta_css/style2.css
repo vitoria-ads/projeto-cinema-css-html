@@ -1,5 +1,5 @@
 body {
-  background-color: #111;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c); /* Fundo degradê escuro */
   color: #fff;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,147 +7,76 @@ body {
   text-align: center;
 }
 
+
 h1 {
   color: #ff0000;
   margin-bottom: 40px;
 }
+
 p {
   color: #ccc;
   margin-bottom: 40px;
 }
+
+
 h2 {
   color: #ff0000;
 }
-.card h2 {
-  position: relative;
-  z-index: 3;
-  font-size: 24px;
-  color: #ff0000;
-}
+
 
 .card {
   margin: auto;
   position: relative;
-  width: 260px;
-  height: 350px;
+  width: 350px;
+  padding: 20px;
   border-radius: 12px;
-  z-index: 1111;
-  overflow: hidden;
+  background: linear-gradient(135deg, #202020, #333333);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #202020, #333333);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
 }
 
-.bg {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 250px;
-  height: 340px;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(24px);
-  border-radius: 10px;
-  overflow: hidden;
-  outline: 2px solid white;
+
+.card:hover {
+  transform: scale(1.02); 
 }
-
-.blob {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background-color: #ff0000;
-  opacity: 1;
-  filter: blur(12px);
-  animation: blob-bounce 5s infinite ease;
-}
-
-@keyframes blob-bounce {
-  0% {
-    transform: translate(-100%, -100%) translate3d(0, 0, 0);
-  }
-
-  25% {
-    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
-  }
-
-  50% {
-    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
-  }
-
-  75% {
-    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
-  }
-
-  100% {
-    transform: translate(-100%, -100%) translate3d(0, 0, 0);
-  }
-}
-
-.opcao {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 15px 0;
-  position: relative;
-  z-index: 3;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.opcao:hover {
-  transform: scale(1.05);
-}
-
-.opcao input[type="radio"] {
-  appearance: none;
-  width: 24px;
-  height: 24px;
-  border: 2px solid #ff0000;
-  border-radius: 50%;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: transparent;
-}
-
-.opcao input[type="radio"]::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ff0000;
-  transform: scale(0);
-  transition: transform 0.2s ease;
-}
-
-.opcao input[type="radio"]:checked::before {
-  transform: scale(1);
-}
-
-.opcao label {
-  font-size: 22px;
-  color: #920000;
-  transition: color 0.3s ease;
-}
-
-.opcao:hover label {
+ 
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
   color: #ff0000;
 }
+
+.horarios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.horario-box {
+  background: #1a1a1a;
+  border: 1px solid #ce0000;
+  border-radius: 12px;
+  padding: 15px 0;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+.horario-box:hover {
+  background: #df0000;
+  color: #000;
+  box-shadow: 0 0 10px #bd0707, 0 0 20px #530000;
+}
+
 button {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  margin-top: 30px; 
   padding: 10px 20px;
   border-radius: 7px;
   border: 1px solid rgb(89, 89, 90);
@@ -159,24 +88,14 @@ button {
   color: #fff;
   overflow: hidden;
   box-shadow: 0 0 0 0 transparent;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-}
+  position: relative; 
 
-button:hover {
-  background: rgb(255, 0, 0);
+  background: rgb(218, 0, 0);
   box-shadow: 0 0 30px 5px rgba(61, 1, 1, 0.815);
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
-button:hover::before {
-  -webkit-animation: sh02 0.5s 0s linear;
-  -moz-animation: sh02 0.5s 0s linear;
-  animation: sh02 0.5s 0s linear;
-}
 
 button::before {
   content: "";
@@ -189,32 +108,30 @@ button::before {
   opacity: 0;
   background: #fff;
   box-shadow: 0 0 50px 30px #fff;
-  -webkit-transform: skewX(-20deg);
-  -moz-transform: skewX(-20deg);
-  -ms-transform: skewX(-20deg);
-  -o-transform: skewX(-20deg);
   transform: skewX(-20deg);
 }
+
+button:hover::before {
+  animation: sh02 0.5s 0s linear;
+}
+
 
 @keyframes sh02 {
   from {
     opacity: 0;
     left: 0%;
   }
-
   50% {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     left: 100%;
   }
 }
 
+
 button:active {
   box-shadow: 0 0 0 0 transparent;
-  -webkit-transition: box-shadow 0.2s ease-in;
-  -moz-transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
 }
