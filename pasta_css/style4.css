@@ -12,13 +12,17 @@ h1 {
 }
 
 .card {
-
   max-width: 500px;
   margin: 0 auto;
   padding: 30px 20px;
   border-radius: 16px;
-background: #240000;
-background: linear-gradient(90deg, rgba(36, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 35%, rgba(36, 0, 0, 1) 100%);
+  background: #240000;
+  background: linear-gradient(
+    90deg,
+    rgba(36, 0, 0, 1) 0%,
+    rgb(102, 2, 2) 35%,
+    rgba(36, 0, 0, 1) 100%
+  );
   box-shadow: 0 0 20px rgb(255, 0, 0);
   display: flex;
   flex-direction: column;
@@ -77,9 +81,8 @@ hr.line {
   color: #ffffff;
 }
 
-
-.btnfos-5{
-  margin-top: 30px; 
+.btnfos-5 {
+  margin-top: 30px;
   padding: 10px 20px;
   border-radius: 7px;
   border: 1px solid rgb(89, 89, 90);
@@ -92,13 +95,12 @@ hr.line {
   overflow: hidden;
   box-shadow: 0 0 0 0 transparent;
   transition: all 0.2s ease-in;
-  position: relative; 
+  position: relative;
 
   background: rgb(218, 0, 0);
   box-shadow: 0 0 30px 5px rgba(61, 1, 1, 0.815);
   transition: all 0.2s ease-out;
 }
-
 
 .btnfos-5::before {
   content: "";
@@ -117,7 +119,6 @@ hr.line {
 .btnfos-5:hover::before {
   animation: sh02 0.5s 0s linear;
 }
-
 
 @keyframes sh02 {
   from {
@@ -152,13 +153,13 @@ hr.line {
 }
 .btnfos-5:hover {
   color: #000000;
- text-decoration: underline;
+  text-decoration: underline;
   background-color: rgba(255, 0, 0, 1);
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 25px rgba(255, 0, 0, 0.5);
   transform: scale(1.05);
   cursor: pointer;
 }
-.botao-lado-a-lado{
+.botao-lado-a-lado {
   display: flex;
   justify-content: center;
   gap: 80px;
